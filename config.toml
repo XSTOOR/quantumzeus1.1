@@ -1,0 +1,47 @@
+# === Quantum Zeus 1.0 Configuration ===
+
+[api]
+google_api_key = "AIzaSyDdCJwkbVzAkdyUl_XvkReARXUidx-P5LM"
+
+[settings]
+# 🤖 Gemini Model Configuration
+model = "models/gemini-1.5-pro-latest"
+language = "en"
+enable_qnlp = true
+max_output_tokens = 2048
+debug_mode = true
+
+[streamlit]
+# 💻 Streamlit Web UI
+page_title = "Quantum Zeus 1.0"
+page_icon = "⚡️"
+theme = "auto"  # Options: "light", "dark", "auto"
+run_on_save = true
+input_placeholder = "Ask Zeus anything..."
+history_display = true
+debug = true
+
+[quantum]
+# ⚛️ Quantum NLP and Circuit Config
+enable_lambeq = true
+lambeq_parser = "bobcat"  # Options: "bobcat", "spacy"
+tensor_ansatz = "IQPAnsatz"  # Options: "IQPAnsatz", "HHLAnsatz", etc.
+use_pennylane = true
+quantum_optimizer = "quantum-gradient-descent"
+diagram_save_path = "quantum_diagrams/"
+enable_quantum_computation = false
+
+[logging]
+# 🪵 Logging level for debugging
+level = "debug"  # Options: "error", "warning", "info", "debug"
+
+[server]
+# 🖥️ Streamlit server settings
+port = 8501
+headless = true
+
+[browser]
+# 🌐 Network settings
+server_address = "0.0.0.0"
+server_port = 8501
+gather_usage_stats = true
